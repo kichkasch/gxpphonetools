@@ -1,0 +1,11 @@
+README for GXPContactManager
+
+GXP Contact Manager enables users to keep phone numbers on a Grandstream GXP 2000 VoIP phone
+up to date by pulling from your computer through a web server.
+
+The web server (PHP) creates an XML file, which can be processed by the GXP phone. Available backends 
+for creating the XML file are SQL database or LDAP. With the SQL version there is also an HTML
+user interface available in order to manage contacts. 
+
+First source of information is its home page:
+http://github.com/kichkasch/gxpphonetools

@@ -1,0 +1,10 @@
+README for GXP Phone Tools
+
+GXP Phone Tools is a selection of tiny programs I created for managing my VoIP SIP Phone
+Grandstream GXP 2000 (http://www.grandstream.com/products/gxp_series/gxp2000/gxp2000.html).
+
+Check the files in the subfolders. READMEs and instructions / files for installing or using
+the programs are provided in there.
+
+First source of information is its home page:
+http://github.com/kichkasch/gxpphonetools
