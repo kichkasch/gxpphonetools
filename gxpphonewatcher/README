@@ -1,0 +1,73 @@
+GXP Phone Watcher
+
+Michael Pilgermann (kichkasch@gmx.de)
+Version 0.1 (2008-09-07)
+
+GXP Phone Watcher visualises notifcation messages in the tray area of your desktop (Gnome) whenever there is
+any relevant call event occuring on your Grandstream GXP 2000 phone.
+
+GXP Phone Watcher was developed on a Linux Box (Ubuntu) and was only tested on this plattform too. It is
+likely to be working with other Linux distributions; due to dependancies there is no way to make it running on
+a Windows Box.
+
+How does it work?
+In fact, there is no proper interface built in the phone for notification purposes like this. However, the phone
+is capable of redirecting syslog messages to a syslog server - we make use of this.
+Basically, all we had to do are the following steps:
+1. Direct syslog output of the phone to our host (to be configured on the phone)
+2. Configure our syslog server to receive these messages and put them in a fifo
+3. Create a small program for parsing the fifo content and pass on relevant information to a gui frontend
+4. Create a gui frontend receiving this relevant information and displaying it on the desktop
+
+This way, GXP Phone Watcher is made up by two components - a program for parsing the syslog messages
+in the fifo and a GUI client application.
+
+Installation
+========
+Make sure the following things are installed prior to installation:
+- a Python installation (I used 2.5.2)
+- Python-GTK2
+- The package "python-gnome2-extras" - the gui is based on a component from this package (egg.trayicon)
+- The syslog-ng logging application installed and running
+
+For now - instructionsn for manual installation (Ubuntu based); an automatic routine might follow:
+1. Configure your phone (in "Advanced Settings" apply the IP address of your machine on the option "syslog server")
+2. Configure your syslog-ng configuration (see "howto-syslog-ng.txt" in this folder for details)
+3. Copy all files to the proper locations on the system:
+    sudo cp GXPPhoneWatcherListener.py /usr/sbin
+    sudo cp GXPPhoneWatcherClient.py /usr/bin
+    sudo cp gxpphonewatcherrc /etc/init.d/
+4. Apply required permissions on these files
+    sudo chmod 755 /usr/sbin/GXPPhoneWatcherListener.py
+    sudo chmod 755 /usr/bin/GXPPhoneWatcherClient.py
+    sudo chmod 755 /etc/init.d/gxpphonewatcherrc
+5. Start Listener as a service on system start up: (due to pipe dependancies must be started before syslog-ng)
+    sudo update-rc.d gxpphonewatcherrc defaults 9
+6. To start up the client application automatically when logging on, go through the following steps:
+    Open on the Desktop: System / Preferences / Sessions
+    "Add" a new Startup Program - in the dialog apply:
+        "GXP Phone Watcher Applet" for Name
+        "/usr/bin/GXPPhoneWatcherClient.py" for command
+    "OK" and "Close" ... and off you go!
+    
+There is also an option to check the number of the incoming call in a database and pick up a name for it. See "database-howto.txt"
+for details on this.
+    
+ToDO
+====
+general:
+- Doc: Architecture overview (diagram)
+- Doc: database howto
+- Doc: comments (epydoc) / documentation
+
+listener (server):
+- finish list of message types
+- support for several clients (GUIs - network servers)
+- proper defintion of variables (database connectivity - configuration ...)
+- do logging properly (configurable or proper default values)
+
+gui:
+- check status of listener and indicate failure
+- evaluate status messages
+- maybe change color of icon depending on the status of the lines
+- cross plattform (pygtk.statusicon does not come with a notification text (baloon) - only tooltip text

@@ -1,0 +1,19 @@
+The following changes have to be applied to the configuration file for syslog-ng (/etc/syslog-ng/syslog-ng.conf):
+
+destination gxp_notify {
+  pipe("/tmp/glx.pipe" template("$HOUR:$MIN:$SEC $MSG\n") template_escape(no));
+};
+
+filter f_gxp { match("GS_LOG"); };
+
+log {
+	source(s_all);
+	filter(f_gxp);
+	destination(gxp_notify);
+};
+
+Please note that you also have to activate receiving remote messages from your phone:
+    Uncomment the line "udp();" for the source "s_all"
+
+Restart syslog-ng after applying the changes:
+    sudo /etc/init.d/syslog-ng restart

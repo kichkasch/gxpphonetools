@@ -1,0 +1,6 @@
+Database HOWTO for GXP Phone Watcher
+
+- this howto is work in progress - 
+
+For now, check GXP Contact Manager for database details. The connection parameters are applied directly in the code
+in GXPPhoneWatcherListener.py.

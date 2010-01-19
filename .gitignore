@@ -3,3 +3,5 @@
 *deb
 *tar.gz
 build
+*.e4p
+.eric4project
