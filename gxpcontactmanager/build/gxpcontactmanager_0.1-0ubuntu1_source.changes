@@ -1,0 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 03 Feb 2010 15:14:37 +0100
+Source: gxpcontactmanager
+Binary: gxpcontactmanager
+Architecture: source
+Version: 0.1-0ubuntu1
+Distribution: karmic
+Urgency: low
+Maintainer: Michael Pilgermann <kichkasch@gmx.de>
+Changed-By: Michael Pilgermann <kichkasch@gmx.de>
+Description: 
+ gxpcontactmanager - Load LDAP phone numbers into Grandstream GXP 2000 VoIP phone
+Changes: 
+ gxpcontactmanager (0.1-0ubuntu1) karmic; urgency=low
+ .
+   * Initial Release
+Checksums-Sha1: 
+ f36db75ee9a79fe842cb23340078732ed268c375 1169 gxpcontactmanager_0.1-0ubuntu1.dsc
+ e49e4b9feae12e75983b9575a1bff2dc37f8ad62 20700 gxpcontactmanager_0.1-0ubuntu1.tar.gz
+Checksums-Sha256: 
+ e8a37be4ed71d3288fe39345b1adba57fcd5d63fc4a805ab4cd7e97452bdaa16 1169 gxpcontactmanager_0.1-0ubuntu1.dsc
+ 68ce4c5d2fa8bb4d8ae1bfd32bca2c948d104dbccfb3dfd069d73cfa20eb11f7 20700 gxpcontactmanager_0.1-0ubuntu1.tar.gz
+Files: 
+ c030f5b9e8470acf591a55e713ae4cdc 1169 web optional gxpcontactmanager_0.1-0ubuntu1.dsc
+ bd25b9162c4f6183e953aab9c558f707 20700 web optional gxpcontactmanager_0.1-0ubuntu1.tar.gz
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iQEcBAEBAgAGBQJLaYTSAAoJECyCaNMbCftR9mYH/jyfUoMZX8O3UtbN8C1Y3MKJ
+cXeM0edcZcIyDibtVDvEzaIJva5eGgpJ57mM13DgiyAHv2wS3uJSkmFuIHolLZNq
+/XJC4F5vocqNmJB2B/LDnDkvud3+oqfZW4toXxv1hCV7DryT9LFRpXhxqmXXdAdq
+343LczRGNblpqkVrDBMCjhN0iQB2tIPV0pAXut8Pnu9jXx71N/IJt7YZngK1s2SS
+QXISWU5/nUu913r4OFLAT1f7cFe7r3TSZvpiDyiwftCMvg2qTtN+d3pIlVqtzvbs
+zg6fMNgfYn1cIrLeorLk42cCfyYSR13WTMQrtVnoLkbtqWs52DKOypp27/mIRzs=
+=oCRh
+-----END PGP SIGNATURE-----

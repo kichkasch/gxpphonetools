@@ -1,0 +1,4 @@
+var/www/gxpcontactmanager
+var/www/gxpcontactmanager/ldap
+var/www/gxpcontactmanager/sql
+var/www/gxpcontactmanager/sql/ressources

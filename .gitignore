@@ -2,6 +2,8 @@
 *~
 *deb
 *tar.gz
-build
 *.e4p
 .eric4project
+*build/*dsc
+*build/*ppa.upload
+*build/*source.changes

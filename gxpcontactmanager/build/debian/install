@@ -1,0 +1,4 @@
+ldap/*.php var/www/gxpcontactmanager/ldap
+sql/*.php var/www/gxpcontactmanager/sql
+sql/*.css var/www/gxpcontactmanager/sql
+sql/ressources/*.png var/www/gxpcontactmanager/sql/ressources/

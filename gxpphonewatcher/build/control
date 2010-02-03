@@ -1,0 +1,8 @@
+Package: gxpphonewatcher
+Version: 0.1
+Section: apps
+Maintainer: Michael Pilgermann <kichkasch@gmx.de>
+Architecture: all
+Depends: python, python-gnome2-extras
+Homepage: http://github.com/kichkasch/gxpphonetools
+Description: Visualises notifcation messages in the tray area of your desktop (Gnome) whenever there is any call event occuring on your Grandstream GXP 2000 phone.
