@@ -9,7 +9,7 @@ VERSION="0.1"
 
 # for UBUNTU Launchpad upload of deb package
 PGP_KEYID ="1B09FB51"
-BUILD_VERSION = "0ubuntu1"
+BUILD_VERSION = "0ubuntu2"
 
 
 clean:

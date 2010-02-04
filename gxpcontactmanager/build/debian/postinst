@@ -9,7 +9,6 @@ case "$1" in
     configure)
 		chown -R www-data:www-data /var/www/gxpcontactmanager
 		chmod -R 750 /var/www/gxpcontactmanager
-		
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

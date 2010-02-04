@@ -8,6 +8,6 @@ Homepage: http://github.com/kichkasch/gxpphonetools
 
 Package: gxpcontactmanager
 Architecture: all
-Depends: apache2, php5, php5-ldap | php5-mysql, ${misc:Depends}
+Depends: apache2, php5, php5-ldap | php5-mysql, ${misc:Depends}, debconf | debconf-2.0
 Description: Load LDAP phone numbers into Grandstream GXP 2000 VoIP phone 
  GXP Contact Manager enables users to keep phone numbers on a Grandstream GXP 2000 VoIP phone up to date by pulling from your computer through a web server.
