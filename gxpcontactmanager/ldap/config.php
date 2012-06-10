@@ -35,6 +35,7 @@ $ldapHost = "192.168.200.20";
 $ldapPort = 389;
 $ldapDomain = "dc=kichkasch,dc=local";
 $ldapFilter = "mozillaCustom4=*gxp*";
+$ldapFilterFB = "mozillaCustom4=*jule*";
 
 $localCountryCode = '+49'; // configure this in order to enable the GXP phone to pick up names from address book for incoming calls
 
